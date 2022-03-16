@@ -64,3 +64,13 @@
 
 
 /* CSS du diaporama FIN */
+
+/* CSS de disciplines */
+li {
+  font-family: Arial, sans-serif;
+  font-size: 100%;
+  color: black;
+  display : list-item;
+  list-style-image : url(puce.gif);
+ } 
+/* CSS de discplices FIN*/
