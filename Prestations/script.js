@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
-var acc = document.getElementsByClassName("accordion");
-var i;
+let acc = document.getElementsByClassName("accordion");
+let i;
 console.log(acc.length)
 
 for (i = 0; i < acc.length; i++) {
