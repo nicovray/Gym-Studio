@@ -1,30 +1,59 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     min-height: 100%;
-    margin:0;
-    padding: 0;
     line-height: 1.5em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Jost', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
-    background-color: whitesmoke;
+    color: #023047;
+    background-color: #8ECAE6;
+}
+
+h2 {
+    color: #FB8500;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h2 {
+    background-color: #023047;
 }
 
 h1 {
-    height: 400px;
-    font-size: 3rem;
-    text-align: center;
-    background-image: url("https://i.ibb.co/mbGCKzB/contact.png");
+    color: #FB8500;
+    padding-top: 10px;
+    height: 250px;
+    background-image: url("contact.png");
     background-repeat: no-repeat;
-    background-size :contain;
-    background-position: center;
+    background-size :cover;
+    display: flex;
+    justify-content: bottom;
+    font-size: clamp(30px, 5vw, 48px);
 }
 
 ul {
     list-style: none;
 }
+
+a:link {color:#023047;}              /* Lien non visité */
+a:visited {color:#8ECAE6;}          /* Lien visité */
+a:hover {color:#FB8500;}            /* Lien survolé*/
+a:active {color:#219EBC;}           /* Lien sélectionné */
+
+
+fieldset {
+    border: none;
+}
+
+div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 
 @media screen and (max-width: 390px) {
 

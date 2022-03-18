@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styleContact.css">
-        <title>Gym Studio</title>
+        <title>CONTACT - Gym Studio</title>
     </head>
 
     <body>
@@ -16,38 +16,33 @@
         </header>
 
         <main>
-            <section>
-                <div>
-                <h1>Contact</h1>    
-                </div>
+            <section class="bann">
+                <h1></h1>    
             </section>
 
-            <section>
+            <section class="local">
                 <h2>Nous situer</h2>
-                <div><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1DqJdxPGhNaYe3pDIAzCS6X09ox89vs4L&ehbc=2E312F" width="100%" height="480px"></iframe></div>
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1DqJdxPGhNaYe3pDIAzCS6X09ox89vs4L&ehbc=2E312F" width="100%" height="480px"></iframe>
             </section>
                         
-            <section>
-                <h2>Nous trouver</h2>
+            <section class="infos">
+                <h2>Nous contacter</h2>
+                <div>
                     <ul class="contact-info text-center">
                         <li><img src="https://img.icons8.com/ios-glyphs/30/000000/google-maps.png"/> Gym Studio, place du Commerce, à l'étage du McDonalds, Nantes - France</li>
                         <li><img src="https://img.icons8.com/ios-glyphs/30/000000/mobile-social-networking.png"/><a href="tel:(+33) 0123456789"> (+33) 01 23 45 67 89</li>
                         <li><img src="https://img.icons8.com/ios-glyphs/30/000000/email.png"/><a href="mailto:contact@gymstudio.fr"> contact@gymstudio.fr</a></li>
                         <li><img src="https://img.icons8.com/ios-glyphs/30/000000/home-page--v1.png"/><a href="https://www.gymstudio.fr"> Site Web de Gym Studio</a></li>
+                        <li><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-new.png" alt="Icone Facebook"/><img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-circle.png" alt="Icone Instagram"></li>
                     </ul>
-                    <figure>
-                        <img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-new.png"/>
-                        <figcaption>Facebook</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-circle.png"/>
-                        <figcaption>Instagram</figcaption>
-                    </figure>
+                </div>
+                        
+                    </div>
             </section>
 
-            <section>
-                <h2>Nous contacter</h2>
-                <div id="tocontactus">
+            <section class="contact">
+                <h2>Nous laisser un message</h2>
+                <div>
                     <form method="post" action="traitement.php">
     
                         <fieldset>
@@ -61,7 +56,7 @@
                             <label for="email">Votre email :</label>
                             <input type="email" name="email" id="email" required />
                         </fieldset>
-                        
+                        <br>
                         <fieldset>
                             <legend>Votre message :</legend>
                             <label for="message">
