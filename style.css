@@ -9,7 +9,7 @@
   text-align: center;
 }
 
-@media screen and (min-width: 600px) { 
+@media screen and (min-width: 992px) { 
     .slider-container {
         /* hauteur img de la version desktop*/
         height: 300px;
@@ -64,3 +64,77 @@
 
 
 /* CSS du diaporama FIN */
+
+/* CSS citation */
+.citation_container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+  max-width: 100%;
+  padding-left: 30px;
+  background-color: #023047;
+  border-radius: 8px;
+  
+}
+
+.citation_author {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  
+    }
+
+.citation_author_name {
+  font-size: 20px;
+  color: white;
+  margin: 10px;
+}
+
+.citation_picture {
+  border-radius: 50% 50%;
+  
+}
+
+.citation_avatar {
+  flex: 0 0 32px;
+  width: 30px;
+  border: 2px solid #FB8500;
+  border-radius: 50% 50%;
+  background-color: transparent;
+  background-color: initial;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+
+.citation_body {
+    padding: 10px;
+    color: white;
+  }
+
+  /* Mode desktop */
+@media screen and (min-width: 992px) { 
+  .citation {      
+     background-color: #FB8500;
+  }
+}
+
+/* FIN CSS citation */
+
+/* CSS Disciplines */
+.espaces_disciplines_container {
+  display: flex;
+  align-items: center;
+  background-color: darkgreen;
+  box-sizing: 100%;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+}
+
+ul {
+  
+
+}
