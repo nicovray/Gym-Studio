@@ -24,17 +24,19 @@ html {
     scroll-behavior: smooth;
 }
 
-
+body {
+    background-color: var(--light-blue);
+}
 /**Header NavBar**/
 
 header {
     /*empeche de cacher le texte en dessous contrairement à fixed */
-    background-color: var(--middle-blue);
+    background-color: var(--dark-blue);
     height: 60px;
     width: 100%;
     position: sticky;
     top: 0;
-    box-shadow: 0px 4px 4px 0 var(--yellow);
+    box-shadow: 0px 4px 4px 0 var(--orange);
     transition: box-shadow 1s;
     z-index: 1;
     /*pour rester toujours en avant-plan*/
@@ -52,13 +54,13 @@ header a {
 .progressBar-container {
     width: 100%;
     height: 4px;
-    background-color: var(--middle-blue);
+    background-color: var(--orange);
 }
 
 .progressBar {
     height: 100%;
     width: 0%;
-    background-color: rgb(192, 127, 6);
+    background-color:var(--orange);
     transition: all 0.5s;
 }
 
@@ -143,7 +145,7 @@ header a {
     width: 35px;
     height: 6px;
     border-radius: 5px;
-    background-color: var(--yellow);
+    background-color: var(--orange);
     transition: all 0.7s;
 }
 
@@ -171,7 +173,7 @@ header a {
 
 /**Media Queries**/
 
-@media (max-width: 800px) {
+@media (max-width: 992px) {
     .hamburger {
         display: flex;
     }
