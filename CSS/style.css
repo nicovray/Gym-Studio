@@ -65,6 +65,7 @@
 
 /* CSS du diaporama FIN */
 
+<<<<<<< HEAD:style.css
 /* CSS citation */
 .citation_container {
   display: flex;
@@ -138,3 +139,14 @@ ul {
   
 
 }
+=======
+/* CSS de disciplines */
+li {
+  font-family: Arial, sans-serif;
+  font-size: 100%;
+  color: black;
+  display : list-item;
+  list-style-image : url(puce.gif);
+ } 
+/* CSS de discplices FIN*/
+>>>>>>> 26fa7a7c6ca3c260579f5c8d312d6d17cf45c1a1:CSS/style.css
