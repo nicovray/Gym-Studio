@@ -1,0 +1,94 @@
+/* début du footer*/
+
+footer {
+    border:#023047 1px solid;
+}
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+.row1 {
+    text-align: center;
+    color:#8ECAE6;
+    background-color: #023047;
+}
+
+.row1 h4 {
+    color:#FB8500;
+}
+
+.bouton {
+    padding: 10px 30px;
+    background: #8ECAE6;
+    color:#023047;
+    border-radius: 11px;
+    border: 2px solid #FB8500;
+}
+
+.bouton:hover {
+    background: #FB8500;
+    color: #023047;
+    border: 2px solid #8ECAE6;
+}
+
+.row2 {
+    text-align: center;
+    color:#023047;
+    background-color: #8ECAE6;
+    border-top: #FB8500 3px solid;
+}
+
+a:link {color:#8ECAE6;}
+a:visited {color:#023047;}
+a:hover {color:#FB8500;}
+a:active {color:#219EBC;}
+
+.copyright {
+    text-align: center;
+    padding: 30px;
+    background-color:#023047;
+    color: #FB8500;
+}
+
+.spikes {
+    position: relative;
+    background-color: #023047;
+}
+  
+  .spikes::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: -0%;
+    top: 100%;
+    z-index: 10;
+    display: block;
+    height: 50px;
+    background-size: 50px 100%;
+    background-image: linear-gradient(135deg, #8ECAE6 25%, transparent 25%), linear-gradient(225deg, #8ECAE6 25%, transparent 25%);
+    background-position: 0 0;
+  }
+
+/* fin du footer*/
+
+@media only screen 
+and (max-width: 460px) {
+    .footerGrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, auto);
+        }
+}
+
+@media only screen 
+and (min-width: 461px) 
+and (max-width: 992px) {
+    .footerGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+        }
+}
