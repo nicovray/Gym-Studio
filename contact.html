@@ -6,6 +6,62 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styleContact.css">
         <title>CONTACT - Gym Studio</title>
+        <script> 
+           function validateForm()                                    
+            { 
+                var name = document.forms["myForm"]["name"];               
+                var email = document.forms["myForm"]["email"];    
+                var message = document.forms["myForm"]["message"];   
+            
+                if (name.value == "")                                  
+                { 
+                    document.getElementById('errorname').innerHTML="Veuillez entrez un nom valide";  
+                    name.focus(); 
+                    return false; 
+                }else{
+                    document.getElementById('errorname').innerHTML="";  
+                }
+                
+                if (email.value == "")                                   
+                { 
+                    document.getElementById('erroremail').innerHTML="Veuillez entrez une adresse mail valide"; 
+                    email.focus(); 
+                    return false; 
+                }else{
+                    document.getElementById('erroremail').innerHTML="";  
+                }
+            
+                if (email.value.indexOf("@", 0) < 0)                 
+                { 
+                    document.getElementById('erroremail').innerHTML="Veuillez entrez une adresse mail valide"; 
+                    email.focus(); 
+                    return false; 
+                } 
+            
+                if (email.value.indexOf(".", 0) < 0)                 
+                { 
+                    document.getElementById('erroremail').innerHTML="Veuillez entrez une adresse mail valide"; 
+                    email.focus(); 
+                    return false; 
+                } 
+            
+                if (message.value == "")                           
+                {
+                    document.getElementById('errormsg').innerHTML="Veuillez entrez un message valide"; 
+                    message.focus(); 
+                    return false; 
+                }else{
+                    document.getElementById('errormsg').innerHTML="";  
+                }
+            
+                return true; 
+            }
+
+                const message = "Message";
+                    document.getElementById("contactForm").addEventListener("submit", function (event) {event.preventDefault();
+                        alert(message);
+                })
+         </script>
     </head>
 
     <body>
@@ -15,66 +71,79 @@
             </nav>
         </header>
 
-        <main>
-            <section class="bann">
-                <h1></h1>    
-            </section>
-
-            <section class="local">
-                <h2>Nous situer</h2>
-                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1DqJdxPGhNaYe3pDIAzCS6X09ox89vs4L&ehbc=2E312F" width="100%" height="480px"></iframe>
-            </section>
-                        
-            <section class="infos">
-                <h2>Nous contacter</h2>
-                <div>
-                    <ul class="contact-info text-center">
-                        <li><img src="https://img.icons8.com/ios-glyphs/30/000000/google-maps.png"/> Gym Studio, place du Commerce, à l'étage du McDonalds, Nantes - France</li>
-                        <li><img src="https://img.icons8.com/ios-glyphs/30/000000/mobile-social-networking.png"/><a href="tel:(+33) 0123456789"> (+33) 01 23 45 67 89</li>
-                        <li><img src="https://img.icons8.com/ios-glyphs/30/000000/email.png"/><a href="mailto:contact@gymstudio.fr"> contact@gymstudio.fr</a></li>
-                        <li><img src="https://img.icons8.com/ios-glyphs/30/000000/home-page--v1.png"/><a href="https://www.gymstudio.fr"> Site Web de Gym Studio</a></li>
-                        <li><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-new.png" alt="Icone Facebook"/><img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-circle.png" alt="Icone Instagram"></li>
-                    </ul>
-                </div>
-                        
+        <main class="infos">
+                <section class="bann">
+                </section>
+                <section class="map">
+                    <h2>Nous situer</h2>
+                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1DqJdxPGhNaYe3pDIAzCS6X09ox89vs4L&ehbc=2E312F" width="100%" height="480px"></iframe>
+                </section>
+                <section class="contact">
+                    <h2>Nous contacter</h2>
+                    <div>
+                        <ul class="contact-info text-center">
+                            <li><img src="https://img.icons8.com/ios-glyphs/60/000000/address.png"/></li>
+                            <li>4 rue Baron - 44000 Nantes</li>
+                            <li><img src="https://img.icons8.com/ios-glyphs/60/000000/phone--v1.png"/></li>
+                            <li><a href="tel:(+33) 0123456789"> (+33) 01 23 45 67 89</a></li>
+                            <li><img src="https://img.icons8.com/ios-glyphs/60/000000/new-post.png"/></li>
+                            <li><a href="mailto:contact@gymstudio.fr"> contact@gymstudio.fr</a></li><br>
+                            <li><img src="https://img.icons8.com/ios-glyphs/60/000000/facebook-new.png" alt="Icone Facebook"/><img src="https://img.icons8.com/ios-glyphs/60/000000/instagram-circle.png" alt="Icone Instagram"><img src="https://img.icons8.com/ios-glyphs/60/000000/youtube-play.png" alt="Icone YouTube"/></li>
+                        </ul>
                     </div>
-            </section>
-
-            <section class="contact">
-                <h2>Nous laisser un message</h2>
-                <div>
-                    <form method="post" action="traitement.php">
-    
-                        <fieldset>
-                            <legend>Vos informations de contact :</legend>
-                            <label for="fname">Nom :</label>
-                            <input type="text" id="fname" name="fname" autofocus />
-                            <br><br>
-                            <label for="lname">Prénom :</label>
-                            <input type="text" id="lname" name="lname" />
-                            <br><br>
-                            <label for="email">Votre email :</label>
-                            <input type="email" name="email" id="email" required />
-                        </fieldset>
-                        <br>
-                        <fieldset>
-                            <legend>Votre message :</legend>
-                            <label for="message">
-                            </label>
-                            <textarea name="message" id="message" rows="10" cols="50">
-                            </textarea><br>
-    
-                            <input id="submit" type="submit" value="Envoyer">
-                        </fieldset>
-                    </form>
-                </div>    
-            </section>
+                </section>
+                <section class="form">
+                    <h2>Nous laisser un message</h2>
+                    <div>
+                        <form name="myForm" action="/file.php" onsubmit="return validateForm()" method="post">
+                            <table class="form-style">
+                               <tr>
+                                  <td>
+                                     <label>
+                                        Votre nom <span class="required">*</span>
+                                     </label>
+                                  </td>
+                                  <td>
+                                     <input type="text" name="name" class="long"/>
+                                     <span class="error" id="errorname"></span>
+                                  </td>
+                               </tr>
+                               <tr>
+                                  <td>
+                                     <label>
+                                        Votre adresse e-mail <span class="required">*</span>
+                                     </label>
+                                  </td>
+                                  <td>
+                                     <input type="email" name="email" class="long"/>
+                                     <span class="error" id="erroremail"></span>
+                                  </td>
+                               </tr>
+                               <tr>
+                                  <td>
+                                     <label>
+                                        Message <span class="required">*</span>
+                                     </label>
+                                  </td>
+                                  <td>
+                                     <textarea name="message" class="long field-textarea"></textarea>
+                                     <span class="error" id="errormsg"></span>
+                                  </td>
+                               </tr>
+                               <tr>
+                                  <td></td>
+                                  <td>
+                                     <input type="submit" value="Envoyer">      
+                                     <input type="reset" value="Réinitialiser"> 
+                                  </td>
+                               </tr>
+                            </table>
+                         </form>
+                    </div>    
+                </section>
         </main>
         
-        <footer>
-            
-        </footer>
-        
+    <footer>
+    </footer>
     </body>
-
 </html>  
