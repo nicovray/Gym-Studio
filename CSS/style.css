@@ -65,12 +65,17 @@
 
 /* CSS du diaporama FIN */
 
-/* CSS de disciplines */
-li {
-  font-family: Arial, sans-serif;
-  font-size: 100%;
-  color: black;
-  display : list-item;
-  list-style-image : url(puce.gif);
- } 
-/* CSS de discplices FIN*/
+/* CSS de photo coach+citation*/
+
+.flex-container-coach {
+  margin-top: 50px;
+  padding: auto;
+  border: black;
+  border-style:solid; 
+  border-width:thin;
+}
+
+ img {
+   width: 120px;
+ }
+/* fin CSS de photo coach+citation*/
