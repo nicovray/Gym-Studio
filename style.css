@@ -1,0 +1,334 @@
+:root {
+    /* COULEURS */
+    
+    --white: #fffffff8;
+    --light-blue: #8ecae6;
+    --middle-blue: #219ebc;
+    --dark-blue: #023047;
+    --yellow: #ffb703;
+    --orange: #fb8500;
+    /* POLICES */
+    --main-police: 'Jost', sans-serif;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: var(--white);
+}
+
+
+
+/**Header NavBar**/
+
+header {
+    /*empeche de cacher le texte en dessous contrairement à fixed */
+    background-color: var(--dark-blue);
+    height: 60px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 4px 4px 0 var(--orange);
+    transition: box-shadow 1s;
+    z-index: 1;
+    /*pour rester toujours en avant-plan*/
+}
+.shadowHeader {
+    box-shadow: 1px 8px 7px 2px #ff51002b;
+}
+header a {
+    text-decoration: none;
+    color: white;
+}
+.progressBar-container {
+    width: 100%;
+    height: 4px;
+    background-color: var(--orange);
+}
+
+.progressBar {
+    height: 100%;
+    width: 0%;
+    background-color: rgb(192, 127, 6);
+    background-color:var(--orange);
+    transition: all 0.5s;
+}
+
+/**NAVBAR**/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    /*taille du texte dynamique*/
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+}
+.logo a {
+    transition: color 0.5s;
+}
+.logo a:hover {
+    color: var(--yellow);
+}
+.nav-ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-ul a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    /*Aulieu de 60px à cause des 4px de la progressBar*/
+    width: 100px;
+    font-size: 1.5rem;
+}
+.nav-ul a:hover {
+    background-color: var(--yellow);
+    border-radius: 5px;
+    animation: flou 0.5s;
+}
+@keyframes flou {
+    from {
+        transform: translateX(-20px);
+        filter: blur(2px);
+    }
+    to {
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+/*Icone Hamburger*/
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+.hamburger :first-child {
+    /*1ere barre pas de margin top*/
+    margin-top: 0;
+}
+.bar1, .bar2, .bar3 {
+    margin-top: 6px;
+    width: 35px;
+    height: 6px;
+    border-radius: 5px;
+    background-color: var(--orange);
+    transition: all 0.7s;
+}
+
+.open .bar1, .open .bar2, .open .bar3 {
+    background-color: var(--yellow);
+}
+.open .bar1 {
+    transform: translateY(200%) rotate(-45deg);
+}
+.open .bar2 {
+    opacity: 0;
+    transform: rotate(45deg);
+}
+.open .bar3 {
+    transform: translateY(-200%) rotate(45deg);
+}
+.noScroll {
+    /*empeche le scroll sur le body via JS*/
+    overflow: hidden;
+}
+
+/**Media Queries**/
+@media (max-width: 992px) {
+    .hamburger {
+        display: flex;
+    }
+
+.nav-ul {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease-out;
+}
+.slide {
+    transform: translate(100%);
+}
+.nav-ul a {
+    justify-content: left;
+    padding-left: 5px;
+    width: 50%;
+    border-bottom: 1px solid rgba(192, 127, 6, 0.2);
+}
+.nav-ul a:hover {
+    border-radius: 0;
+    animation: none;
+}
+article p{
+    font-size: 1rem;
+}
+}
+
+/** Page Coachs **/
+
+
+
+
+
+
+/** version desktop **/
+.coach {
+    background-color: var(--white);
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .bob { grid-area: 1 / 1 / 2 / 2; }
+    .apple { grid-area: 2 / 3 / 3 / 4; }
+    .dylan { grid-area: 3 / 1 / 4 / 2; }
+    .ellie { grid-area: 4 / 3 / 5 / 4; }
+    .emy { grid-area: 5 / 1 / 6 / 2; }
+    .kim { grid-area: 6 / 3 / 7 / 4; }
+    .pierre { grid-area: 7 / 1 / 8 / 2; }
+    .lucy { grid-area: 8 / 3 / 9 / 4; }
+    .esteban { grid-area: 9 / 1 / 10 / 2; }
+
+
+    @media (max-width: 992px) {
+        .coach {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+                
+        .bob { grid-area: 1 / 1 / 2 / 2; }
+        .apple { grid-area: 2 / 2 / 3 / 3; }
+        .dylan { grid-area: 3 / 1 / 4 / 2; }
+        .ellie { grid-area: 4 / 2 / 5 / 3; }
+        .emy { grid-area: 5 / 1 / 6 / 2; }
+        .kim { grid-area: 6 / 2 / 7 / 3; }
+        .pierre { grid-area: 7 / 1 / 8 / 2; }
+        .lucy { grid-area: 8 / 2 / 9 / 3; }
+        .esteban { grid-area: 9 / 1 / 10 / 2; }
+    }
+    /** Page Coachs **/
+
+
+
+/** Footer **/
+
+footer {
+    border:#023047 1px solid;
+    position: absolute;
+    bottom: 0;
+    height: 10px;
+}
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+.row1 {
+    text-align: center;
+    color:#8ECAE6;
+    background-color: #023047;
+}
+
+.row1 h4 {
+    color:#FB8500;
+}
+
+.bouton {
+    padding: 10px 30px;
+    background: #8ECAE6;
+    color:#023047;
+    border-radius: 11px;
+    border: 2px solid #FB8500;
+}
+
+.bouton:hover {
+    background: #FB8500;
+    color: #023047;
+    border: 2px solid #8ECAE6;
+}
+
+.row2 {
+    text-align: center;
+    color:#023047;
+    background-color: #8ECAE6;
+    border-top: #FB8500 3px solid;
+}
+
+
+
+.copyright {
+    text-align: center;
+    padding: 30px;
+    background-color:#023047;
+    color: #FB8500;
+}
+
+.spikes {
+    position: relative;
+    background-color: #023047;
+}
+
+.spikes::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: -0%;
+    top: 100%;
+    z-index: 10;
+    display: block;
+    height: 50px;
+    background-size: 50px 100%;
+    background-image: linear-gradient(135deg, #8ECAE6 25%, transparent 25%), linear-gradient(225deg, #8ECAE6 25%, transparent 25%);
+    background-position: 0 0;
+  }
+
+/* fin du footer*/
+@media only screen 
+and (max-width: 460px) {
+    .footerGrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, auto);
+        }
+}
+
+@media only screen 
+and (min-width: 461px) 
+and (max-width: 992px) {
+    .footerGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+        }
+} 
