@@ -67,15 +67,28 @@
 
 /* CSS de photo coach+citation*/
 
-.flex-container-coach {
-  margin-top: 50px;
-  padding: auto;
+.flex-container-c {
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding: 2%;
   border: black;
   border-style:solid; 
   border-width:thin;
-}
-
+ }
  img {
-   width: 120px;
+  width: 10%;
+  position: relative;
+  right:auto;
+  margin-left: 2%;
+  margin-bottom: 2%;
  }
 /* fin CSS de photo coach+citation*/
+
+/* début CSS de photo client+citation*/
+ img.client{
+  width: 8%;
+  position: relative;
+  left:5%;
+ }
+/*fin CSS de photo client+citation*/
