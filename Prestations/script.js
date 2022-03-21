@@ -11,12 +11,14 @@ for (i = 0; i < acc.length; i++) {
     this.classList.toggle("active");
 
     /*  */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
+    let panel = this.nextElementSibling;
+    let divAcc = document.getElementById('div-accordion');
+    if (panel.style.display === "block" && divAcc.style.height != "615px" ) {
       panel.style.display = "none";
     } else {
       panel.style.display = "block";
     }
+
   });
 }
   /* HEADER */
