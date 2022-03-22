@@ -2,11 +2,12 @@
 
 .slider-container {
   /*hauteur img de la version mobile*/  
-  height: 150px;
+  height: 200px;
   width: 100%;
   position: relative;
   overflow: hidden;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 @media screen and (min-width: 992px) { 
@@ -39,9 +40,28 @@
 .slide {
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 10;
+  background-size: 100% 100%; 
+  background-position: 50% 50%;
+  transition: left 0s 0.75s;
 }
-
-  
+[id^="slide"]:checked + .slide {
+  left: 0;
+  z-index: 100;
+  transition: left 0.65s ease-out;
+}
+.slide-1 {
+  background-image: url("/RESSOURCES/IMAGES/img1.png");
+}
+.slide-2 {
+  background-image: url("/RESSOURCES/IMAGES/img2.jpg");
+}
+.slide-3 {
+  background-image: url("/RESSOURCES/IMAGES/img3.jpg");
+}
 /* CSS du diaporama FIN */
 
 
@@ -63,8 +83,7 @@
     display: flex;
     align-items: center;
     padding-left: 10px;
-    
-      }
+  }
   
   .citation_author_name {
     font-size: 20px;
@@ -73,16 +92,12 @@
     color: black;
     font-size: 16px;
     font-weight: bold;
-  
-    
-    
   }
   
   .citation_picture {
     border-radius: 50% 50%;
     width: 50px;
     height: 50px;
-        
   }
   
   .citation_avatar {
@@ -95,33 +110,28 @@
   
   
   .citation_body {
-      padding: 10px;
-      color: black;
-      font-size: 16px;
-      font-weight: bold;
-      
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+  }
     
-    }
-    
-  
     /* Mode desktop */
   @media screen and (min-width: 992px) { 
     .citation_container {      
        background-color: #FB8500;
     }
     .citation_avatar {
-    background-color: transparent;
-    background-color: initial;
-    overflow: hidden;
-    margin-top: 8px;
-    width: 150px;
+      background-color: transparent;
+      background-color: initial;
+      overflow: hidden;
+      margin-top: 8px;
+      width: 150px;
     }
     .citation_picture {
-    width: 100px;
-    height: 100px;
-
+      width: 100px;
+      height: 100px;
     }
-
   }
   
   /* FIN CSS citation */
@@ -135,25 +145,24 @@
   }
 
   .salle_seances{
-      display: flex;
-
-      justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
   }
 
   .salle, .seances{
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 
   .detentebtn, .sallebtn, .seancesbtn{
     margin-top: 18px; 
     border-color: #FB8500;
-      border-radius: 30px;
-      width:170px;
-      height: 40px;
-      color: white;
-      font-weight: bold;
-      background: none;
+    border-radius: 30px;
+    width:170px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    background: none;
   }
 
   .detente {
@@ -162,15 +171,14 @@
   }
 
   ul {
-  list-style-type: none; 
-}
+    list-style-type: none; 
+  }
 
   li::before {
-   content: "•"; color: #FB8500; size: 100px;
-   display: inline-block; width: 1em;
+    content: "•"; color: #FB8500; size: 100px;
+    display: inline-block; width: 1em;
     margin-left: -1em;
     font-size: 16px;
-   
   }
 /* FIN CCS Espaces Disciplines */
 /* CSS de photo coach+citation*/
@@ -178,8 +186,6 @@
 .flex-container-c {
   height: 100px;
   margin-top: 2%;
-  margin-left: 2%;
-  margin-right: 2%;
   padding: 2%;
   border: black;
   border-style:solid; 
@@ -188,7 +194,13 @@
   font-size: x-small;
  }
 
- img {
+ #img_coach {
+  width: 20%;
+  position: relative;
+  right:auto;
+ }
+
+ #img_etoile{
   width: 20%;
   position: relative;
   right:auto;
@@ -200,7 +212,7 @@
 /* fin CSS de photo coach+citation*/
 
 /* début CSS de photo client+citation*/
- .img_client{
+ #img_client{
   width: 100%;
   height: 100%;
  }
