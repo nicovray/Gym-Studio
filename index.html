@@ -2,11 +2,39 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Trop-wild-pour-toi</title>
-        <link rel=stylesheet href="CSS/style.css"/>
+        <title>Gym Studio</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <header id="header">
+            <div class="progressBar-container">
+                <div class="progressBar" id="progressBar"></div>
+            </div>
+            <nav class="navbar">
+                <div class="logo"><a href="">Logo</a></div>
+                <ul class="nav-ul" id="nav_ul">
+                    <li>
+                        <a href="#accueil">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="#prestations">Prestations</a>
+                    </li>
+                    <li>
+                        <a href="#team">Team</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </nav>
+        </header>
         <h1>Page d'accueil</h1>
         <!-- diaporama -->
         <div class="slider-container">
@@ -16,11 +44,11 @@
               <label for="slide-dot-3"></label>
             </div>
             <input id="slide-dot-1" type="radio" name="slides" checked />
-            <div class="slide slide-1"></div>
+            <div class="slide-d slide-1"></div>
             <input id="slide-dot-2" type="radio" name="slides" />
-            <div class="slide slide-2"></div>
+            <div class="slide-d slide-2"></div>
             <input id="slide-dot-3" type="radio" name="slides" />
-            <div class="slide slide-3"></div>
+            <div class="slide-d slide-3"></div>
         </div>
         <!-- fin diaporama -->
         <!-- citation -->
@@ -93,4 +121,5 @@
     </body>
     <foot>
     </foot>
+<script src="script.js"></script> 
 </html>
