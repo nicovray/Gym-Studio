@@ -39,45 +39,22 @@
 .slide {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  z-index: 10;
-  background-size: 100% 100%; 
-  background-position: 50% 50%;
-  transition: left 0s 0.75s;
-}
-[id^="slide"]:checked + .slide {
-  left: 0;
-  z-index: 100;
-  transition: left 0.65s ease-out;
-}
-.slide-1 {
-  background-image: url("/RESSOURCES/IMAGES/img1.png");
-}
-.slide-2 {
-  background-image: url("/RESSOURCES/IMAGES/img2.jpg");
-}
-.slide-3 {
-  background-image: url("/RESSOURCES/IMAGES/img3.jpg");
 }
 
-
+  
 /* CSS du diaporama FIN */
 
-<<<<<<< HEAD:style.css
-/* CSS citation */
-.citation_container {
+
+ /* CSS citation */
+ .citation_container {
   display: flex;
   position: relative;
   flex-direction: column;
   align-items: flex-start;
-  width: auto;
-  max-width: 100%;
   padding-left: 30px;
   background-color: #023047;
   border-radius: 8px;
-  
+      
 }
 
 .citation_author {
@@ -117,36 +94,55 @@
 
   /* Mode desktop */
 @media screen and (min-width: 992px) { 
-  .citation {      
+  .citation_container {      
      background-color: #FB8500;
   }
 }
 
 /* FIN CSS citation */
 
-/* CSS Disciplines */
-.espaces_disciplines_container {
-  display: flex;
-  align-items: center;
-  background-color: darkgreen;
-  box-sizing: 100%;
-  border-radius: 8px;
-  text-align: center;
+/* CSS Espaces Disciplines */
+.espaces_disciplines_container{
+  background-color: #023047;
   color: white;
+  height: 220px;
+  
+}
+
+.salle_seances{
+    display: flex;
+
+    justify-content: space-around;
+}
+
+.salle, .seances{
+    display: flex;
+    flex-direction: column;
+}
+
+.detentebtn, .sallebtn, .seancesbtn{
+    border-color:#FB8500;
+    width:170px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    background: none;
+}
+
+.detente {
+  display: flex;
+  justify-content: center;
 }
 
 ul {
-  
-
+list-style-type: none; 
 }
-=======
-/* CSS de disciplines */
-li {
-  font-family: Arial, sans-serif;
-  font-size: 100%;
-  color: black;
-  display : list-item;
-  list-style-image : url(puce.gif);
- } 
-/* CSS de discplices FIN*/
->>>>>>> 26fa7a7c6ca3c260579f5c8d312d6d17cf45c1a1:CSS/style.css
+
+li::before {
+ content: "•"; color: #FB8500; size: 20px;
+display: inline-block; width: 1em;
+  margin-left: -1em;
+      font-size: 25px;
+ 
+}
+/* FIN CCS Espaces Disciplines */
