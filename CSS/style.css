@@ -45,104 +45,172 @@
 /* CSS du diaporama FIN */
 
 
- /* CSS citation */
- .citation_container {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 30px;
-  background-color: #023047;
-  border-radius: 8px;
-      
-}
-
-.citation_author {
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
+ 
+  /* CSS citation */
+  .citation_container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+    background-color: #1c87c9;
+    border-radius: 8px;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;    
+  }
   
+  .citation_author {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    
+      }
+  
+  .citation_author_name {
+    font-size: 20px;
+    color: white;
+    margin: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+  
+    
+    
+  }
+  
+  .citation_picture {
+    border-radius: 50% 50%;
+    width: 50px;
+    height: 50px;
+        
+  }
+  
+  .citation_avatar {
+    width: 60px;
+    background-color: transparent;
+    background-color: initial;
+    overflow: hidden;
+    margin-top: 8px;
+  }
+  
+  
+  .citation_body {
+      padding: 10px;
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+      
+    
+    }
+    
+  
+    /* Mode desktop */
+  @media screen and (min-width: 992px) { 
+    .citation_container {      
+       background-color: #FB8500;
+    }
+    .citation_avatar {
+    background-color: transparent;
+    background-color: initial;
+    overflow: hidden;
+    margin-top: 8px;
+    width: 150px;
+    }
+    .citation_picture {
+    width: 100px;
+    height: 100px;
+
     }
 
-.citation_author_name {
-  font-size: 20px;
-  color: white;
-  margin: 10px;
-}
-
-.citation_picture {
-  border-radius: 50% 50%;
+  }
   
-}
-
-.citation_avatar {
-  flex: 0 0 32px;
-  width: 30px;
-  border: 2px solid #FB8500;
-  border-radius: 50% 50%;
-  background-color: transparent;
-  background-color: initial;
-  overflow: hidden;
-  margin-top: 8px;
-}
-
-
-.citation_body {
-    padding: 10px;
+  /* FIN CSS citation */
+  
+  /* CSS Espaces Disciplines */
+  .espaces_disciplines_container{
+    background-color: #023047;
     color: white;
+    height: 220px;
+    font-family: 'Jost', sans-serif; 
   }
 
-  /* Mode desktop */
-@media screen and (min-width: 992px) { 
-  .citation_container {      
-     background-color: #FB8500;
+  .salle_seances{
+      display: flex;
+
+      justify-content: space-around;
   }
-}
 
-/* FIN CSS citation */
+  .salle, .seances{
+      display: flex;
+      flex-direction: column;
+  }
 
-/* CSS Espaces Disciplines */
-.espaces_disciplines_container{
-  background-color: #023047;
-  color: white;
-  height: 220px;
-  
-}
+  .detentebtn, .sallebtn, .seancesbtn{
+    margin-top: 18px; 
+    border-color: #FB8500;
+      border-radius: 30px;
+      width:170px;
+      height: 40px;
+      color: white;
+      font-weight: bold;
+      background: none;
+  }
 
-.salle_seances{
+  .detente {
     display: flex;
+    justify-content: center;
+  }
 
-    justify-content: space-around;
+  ul {
+  list-style-type: none; 
 }
 
-.salle, .seances{
-    display: flex;
-    flex-direction: column;
-}
-
-.detentebtn, .sallebtn, .seancesbtn{
-    border-color:#FB8500;
-    width:170px;
-    height: 40px;
-    color: white;
-    font-weight: bold;
-    background: none;
-}
-
-.detente {
-  display: flex;
-  justify-content: center;
-}
-
-ul {
-list-style-type: none; 
-}
-
-li::before {
- content: "•"; color: #FB8500; size: 20px;
-display: inline-block; width: 1em;
-  margin-left: -1em;
-      font-size: 25px;
- 
-}
+  li::before {
+   content: "•"; color: #FB8500; size: 100px;
+   display: inline-block; width: 1em;
+    margin-left: -1em;
+    font-size: 16px;
+   
+  }
 /* FIN CCS Espaces Disciplines */
+/* CSS de photo coach+citation*/
+
+.flex-container-c {
+  height: 100px;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding: 2%;
+  border: black;
+  border-style:solid; 
+  border-width:thin;
+  display: flex;
+  font-size: x-small;
+ }
+
+ img {
+  width: 20%;
+  position: relative;
+  right:auto;
+ }
+
+ .div_coach{
+   margin-left: 20px;
+ }
+/* fin CSS de photo coach+citation*/
+
+/* début CSS de photo client+citation*/
+ .img_client{
+  width: 100%;
+  height: 100%;
+ }
+ .container_client{
+  width: 15%;
+  height: 100%;
+  float: right;
+ }
+ .client_text{
+   width: 100%;
+   margin-right: 20px;
+ }
+/*fin CSS de photo client+citation*/
