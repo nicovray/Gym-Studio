@@ -269,13 +269,13 @@ header a {
     transition: left 0.65s ease-out;
   }
   .slide-1 {
-    background-image: url("/RESSOURCES/IMAGES/GymStudio.png");
+    background-image: url("/RESSOURCES/IMAGES/StudioGym.png");
   }
   .slide-2 {
     background-image: url("/RESSOURCES/IMAGES/fitness.png");
   }
   .slide-3 {
-    background-image: url("/RESSOURCES/IMAGES/ManGym.png");
+    background-image: url("/RESSOURCES/IMAGES/womanGym.png");
   }
   /* CSS du diaporama FIN */
   
