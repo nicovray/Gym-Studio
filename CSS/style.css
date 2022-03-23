@@ -44,7 +44,6 @@
   
 /* CSS du diaporama FIN */
 
-
  
   /* CSS citation */
   .citation_container {
@@ -73,9 +72,7 @@
     color: black;
     font-size: 16px;
     font-weight: bold;
-  
-    
-    
+      
   }
   
   .citation_picture {
@@ -99,8 +96,7 @@
       color: black;
       font-size: 16px;
       font-weight: bold;
-      
-    
+          
     }
     
   
@@ -173,6 +169,7 @@
    
   }
 /* FIN CCS Espaces Disciplines */
+
 /* CSS de photo coach+citation*/
 
 .flex-container-c {
