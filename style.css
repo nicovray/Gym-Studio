@@ -71,7 +71,6 @@ header a {
     justify-content: space-between;
     height: 100%;
     width: 100%;
-    z-index: 10;
 }
 
 .logo {
@@ -215,7 +214,7 @@ header a {
     /*hauteur img de la version mobile*/  
     height: 200px;
     width: 100%;
-    position: relative;
+    position: sticky;
     overflow: hidden;
     text-align: center;
     margin-bottom: 15px;
@@ -230,7 +229,13 @@ header a {
   
   .menu {
     position: absolute;
+    left: 0;
+    z-index: -1;
     width: 100%;
+    bottom: 0;
+  }
+  .buttons{
+      visibility:hidden;
   }
   .menu label {
     cursor: pointer;
@@ -249,14 +254,18 @@ header a {
     width: 100%;
     height: 100%;
     position: absolute;
+    overflow: hidden;
     top: 0;
     left: 100%;
+    z-index: 10;
     background-size: 100% 100%; 
     background-position: 50% 50%;
     transition: left 0s 0.75s;
+    visibility: visible;
   }
   [id^="slide"]:checked + .slide-d {
     left: 0;
+    z-index: -2;
     transition: left 0.65s ease-out;
   }
   .slide-1 {
