@@ -1,0 +1,444 @@
+:root {
+
+    /* COULEURS */
+    
+    --light-blue: #8ecae6;
+    --middle-blue: #219ebc;
+    --dark-blue: #023047;
+    --yellow: #ffb703;
+    --orange: #fb8500;
+
+    /* POLICES */
+
+    --main-police: 'Jost', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--light-blue);
+}
+/**Header NavBar**/
+
+header {
+    /*empeche de cacher le texte en dessous contrairement à fixed */
+    background-color: var(--dark-blue);
+    height: 60px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 4px 4px 0 var(--orange);
+    transition: box-shadow 1s;
+    z-index: 1;
+    /*pour rester toujours en avant-plan*/
+}
+
+.shadowHeader {
+    box-shadow: 1px 8px 7px 2px #ff51002b;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+.progressBar-container {
+    width: 100%;
+    height: 4px;
+    background-color: var(--orange);
+}
+
+.progressBar {
+    height: 100%;
+    width: 0%;
+    background-color:var(--orange);
+    transition: all 0.5s;
+}
+
+/**NAVBAR**/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    /*taille du texte dynamique*/
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+}
+
+.logo a {
+    transition: color 0.5s;
+}
+
+.logo a:hover {
+    color: var(--yellow);
+}
+
+.nav-ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-ul a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    /*Aulieu de 60px à cause des 4px de la progressBar*/
+    width: 100px;
+    font-size: 1.5rem;
+}
+
+.nav-ul a:hover {
+    background-color: var(--yellow);
+    border-radius: 5px;
+    animation: flou 0.5s;
+}
+
+@keyframes flou {
+    from {
+        transform: translateX(-20px);
+        filter: blur(2px);
+    }
+    to {
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+
+
+/*Icone Hamburger*/
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+
+.hamburger :first-child {
+    /*1ere barre pas de margin top*/
+    margin-top: 0;
+}
+
+.bar1, .bar2, .bar3 {
+    margin-top: 6px;
+    width: 35px;
+    height: 6px;
+    border-radius: 5px;
+    background-color: var(--orange);
+    transition: all 0.7s;
+}
+
+.open .bar1, .open .bar2, .open .bar3 {
+    background-color: var(--yellow);
+}
+
+.open .bar1 {
+    transform: translateY(200%) rotate(-45deg);
+}
+
+.open .bar2 {
+    opacity: 0;
+    transform: rotate(45deg);
+}
+
+.open .bar3 {
+    transform: translateY(-200%) rotate(45deg);
+}
+
+.noScroll {
+    /*empeche le scroll sur le body via JS*/
+    overflow: hidden;
+}
+
+/**Media Queries**/
+
+@media (max-width: 992px) {
+    .hamburger {
+        display: flex;
+    }
+    .nav-ul {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: transform 0.5s ease-out;
+    }
+    .slide {
+        transform: translate(100%);
+    }
+    .nav-ul a {
+        justify-content: left;
+        padding-left: 5px;
+        width: 50%;
+        border-bottom: 1px solid rgba(192, 127, 6, 0.2);
+    }
+    .nav-ul a:hover {
+        border-radius: 0;
+        animation: none;
+    }
+
+    article p{
+        font-size: 1rem;
+    }
+}
+
+/* CSS du diaporama */
+
+.slider-container {
+    /*hauteur img de la version mobile*/  
+    height: 200px;
+    width: 100%;
+    position: sticky;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  @media screen and (min-width: 992px) { 
+      .slider-container {
+          /* hauteur img de la version desktop*/
+          height: 300px;
+      }
+  }
+  
+  .menu {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    bottom: 0;
+  }
+  .buttons{
+      visibility:hidden;
+  }
+  .menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50px;
+    margin: 0 0.2em 1em;
+  }
+  .menu label:hover,
+  .menu label:focus {
+    background: #1c87c9;
+  }
+  .slide-d {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    background-size: 100% 100%; 
+    background-position: 50% 50%;
+    transition: left 0s 0.75s;
+    visibility: visible;
+  }
+  [id^="slide"]:checked + .slide-d {
+    left: 0;
+    z-index: -2;
+    transition: left 0.65s ease-out;
+  }
+  .slide-1 {
+    background-image: url("/RESSOURCES/IMAGES/img1.png");
+  }
+  .slide-2 {
+    background-image: url("/RESSOURCES/IMAGES/img2.jpg");
+  }
+  .slide-3 {
+    background-image: url("/RESSOURCES/IMAGES/img3.jpg");
+  }
+  /* CSS du diaporama FIN */
+  
+  
+   
+    /* CSS citation */
+    .citation_container {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 30px;
+      background-color: #1c87c9;
+      border-radius: 8px;
+      font-family: 'Jost', sans-serif;
+      font-size: 16px;    
+    }
+    
+    .citation_author {
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+    }
+    
+    .citation_author_name {
+      font-size: 20px;
+      color: white;
+      margin: 10px;
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
+    .citation_picture {
+      border-radius: 50% 50%;
+      width: 50px;
+      height: 50px;
+    }
+    
+    .citation_avatar {
+      width: 60px;
+      background-color: transparent;
+      background-color: initial;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    
+    
+    .citation_body {
+      padding: 10px;
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+    }
+      
+      /* Mode desktop */
+    @media screen and (min-width: 992px) { 
+      .citation_container {      
+         background-color: #FB8500;
+      }
+      .citation_avatar {
+        background-color: transparent;
+        background-color: initial;
+        overflow: hidden;
+        margin-top: 8px;
+        width: 150px;
+      }
+      .citation_picture {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    
+    /* FIN CSS citation */
+    
+    /* CSS Espaces Disciplines */
+    .espaces_disciplines_container{
+      background-color: #023047;
+      color: white;
+      height: 220px;
+      font-family: 'Jost', sans-serif; 
+    }
+  
+    .salle_seances{
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    .salle, .seances{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .detentebtn, .sallebtn, .seancesbtn{
+      margin-top: 18px; 
+      border-color: #FB8500;
+      border-radius: 30px;
+      width:170px;
+      height: 40px;
+      color: white;
+      font-weight: bold;
+      background: none;
+    }
+  
+    .detente {
+      display: flex;
+      justify-content: center;
+    }
+  
+    ul {
+      list-style-type: none; 
+    }
+  
+    li::before {
+      content: "•"; color: #FB8500; size: 100px;
+      display: inline-block; width: 1em;
+      margin-left: -1em;
+      font-size: 16px;
+    }
+  /* FIN CCS Espaces Disciplines */
+  /* CSS de photo coach+citation*/
+  
+  .flex-container-c {
+    height: 100px;
+    margin-top: 2%;
+    padding: 2%;
+    border: black;
+    border-style:solid; 
+    border-width:thin;
+    display: flex;
+    font-size: x-small;
+   }
+  
+   #img_coach {
+    width: 20%;
+    position: relative;
+    right:auto;
+   }
+  
+   #img_etoile{
+    width: 20%;
+    position: relative;
+    right:auto;
+   }
+  
+   .div_coach{
+     margin-left: 20px;
+   }
+  /* fin CSS de photo coach+citation*/
+  
+  /* début CSS de photo client+citation*/
+   #img_client{
+    width: 100%;
+    height: 100%;
+   }
+   .container_client{
+    width: 15%;
+    height: 100%;
+    float: right;
+   }
+   .client_text{
+     width: 100%;
+     margin-right: 20px;
+   }
+  /*fin CSS de photo client+citation*/
+  

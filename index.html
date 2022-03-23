@@ -2,46 +2,73 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Trop-wild-pour-toi</title>
-        <link rel=stylesheet href="style.css"/>
-        <script type="text/javascript" src="SCRIPT/script.js"></script>
+        <title>Gym Studio</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <header id="header">
+            <div class="progressBar-container">
+                <div class="progressBar" id="progressBar"></div>
+            </div>
+            <nav class="navbar">
+                <div class="logo"><a href="">Logo</a></div>
+                <ul class="nav-ul" id="nav_ul">
+                    <li>
+                        <a href="#accueil">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="#prestations">Prestations</a>
+                    </li>
+                    <li>
+                        <a href="#team">Team</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </nav>
+        </header>
         <h1>Page d'accueil</h1>
         <!-- diaporama -->
         <div class="slider-container">
             <div class="menu">
-              <label for="slide-dot-1"></label>
-              <label for="slide-dot-2"></label>
-              <label for="slide-dot-3"></label>
+              <label for="slide-d-dot-1"></label>
+              <label for="slide-d-dot-2"></label>
+              <label for="slide-d-dot-3"></label>
             </div>
-            <input id="slide-dot-1" type="radio" name="slides" checked />
-            <div class="slide slide-1"></div>
-            <input id="slide-dot-2" type="radio" name="slides" />
-            <div class="slide slide-2"></div>
-            <input id="slide-dot-3" type="radio" name="slides" />
-            <div class="slide slide-3"></div>
-        </div>
+            <div class="buttons">
+                <input id="slide-d-dot-1" type="radio" name="slides" checked />
+                <div class="slide-d slide-1"></div>
+                <input id="slide-d-dot-2" type="radio" name="slides" />
+                <div class="slide-d slide-2"></div>
+                <input id="slide-d-dot-3" type="radio" name="slides" />
+                <div class="slide-d slide-3"></div>
+            </div>
+    </div>
         <!-- fin diaporama -->
-    <!-- citation -->
+        <!-- citation -->
         <div class="citation_container">
             <div class="citation_author">
-            <span class="citation_avatar">            
-            <img class="citation_picture" src ="pictures/emilie.jpg" width =30px>
-            </span>
-            <span class="citation_author_name"> Emilie </span>
+                <span class="citation_avatar">            
+                    <img class="citation_picture" src ="RESSOURCES/IMAGES/emilie.jpg" width =30px>
+                </span>
+                <span class="citation_author_name"> Emilie </span>
             </div>
             <div class ="citation_body">
                 <p> Notre philosophie</p>
-                 <p> Satisfaire tous nos adhérents, quelque soit son profil. Viens comme tu es, on s'occupe du reste ! Inclusion, respect et sueur à volonté !</p>
-             </div>
-             </div>
-             
+                <p> Satisfaire tous nos adhérents, quelque soit son profil. Viens comme tu es, on s'occupe du reste ! Inclusion, respect et sueur à volonté !</p>
+            </div>
+        </div>
         <!-- fin citation -->
-
-         <!-- disciplines -->
-         <div class="espaces_disciplines_container">
+        <!-- disciplines -->
+        <div class="espaces_disciplines_container">
             <div class="salle_seances">
                 <div class="salle">
                     <input class="sallebtn"type="button"value="Salle accès libre">
@@ -68,10 +95,10 @@
         <!-- photo coach+ citation-->
         <p>  
             <div class="flex-container-c">
-                <img  src="RESSOURCES/IMAGES/coach.jpg" alt="coach"/>
+                <img id="img_coach" src="RESSOURCES/IMAGES/coach.jpg" alt="coach"/>
                 <div class="div_coach">
                     <div>
-                        <img  src="RESSOURCES/IMAGES/etoiles.jpg" alt="etoiles"/>
+                        <img id="img_etoile" src="RESSOURCES/IMAGES/5etoiles.png" alt="etoiles"/>
                     </div>
                     <span >
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -89,11 +116,12 @@
                     por incididunt ut labore et dolore magation."
                 </span>
                 <div class="container_client">
-                    <img class="img_client" src="RESSOURCES/IMAGES/client.jpg" alt="client"/>
+                    <img id="img_client" src="RESSOURCES/IMAGES/client.jpg" alt="client"/>
                 </div>
             </div>
         </p>
     </body>
     <foot>
     </foot>
+<script src="script.js"></script> 
 </html>
