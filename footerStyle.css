@@ -6,24 +6,34 @@ footer {
 
 .footerGrid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
 }
 
 .row1 {
     text-align: center;
     color:#8ECAE6;
     background-color: #023047;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: #FB8500 1px solid;
 }
 
-.row1 h4 {
+h3 {
     color:#FB8500;
 }
+
+.row1 a:link {color:#8ECAE6;}
+.row1 a:visited {color:#023047;}
+.row1 a:hover {color:#FB8500;}
+.row1 a:active {color:#219EBC;}
 
 .bouton {
     padding: 10px 30px;
     background: #8ECAE6;
     color:#023047;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
     border-radius: 11px;
     border: 2px solid #FB8500;
 }
@@ -36,15 +46,12 @@ footer {
 
 .row2 {
     text-align: center;
-    color:#023047;
     background-color: #8ECAE6;
-    border-top: #FB8500 3px solid;
 }
 
-a:link {color:#8ECAE6;}
-a:visited {color:#023047;}
-a:hover {color:#FB8500;}
-a:active {color:#219EBC;}
+#logo {
+    padding-top: 50px;
+}
 
 .copyright {
     text-align: center;
@@ -58,7 +65,7 @@ a:active {color:#219EBC;}
     background-color: #023047;
 }
   
-  .spikes::after {
+.spikes::after {
     content: '';
     position: absolute;
     right: 0;
@@ -75,20 +82,19 @@ a:active {color:#219EBC;}
 /* fin du footer*/
 
 @media only screen 
-and (max-width: 460px) {
+and (min-width: 992px) {
     .footerGrid {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(8, auto);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         }
-}
 
-@media only screen 
-and (min-width: 461px) 
-and (max-width: 992px) {
-    .footerGrid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, auto);
-        }
-}
+    #logo {
+        grid-column: 1/3;
+        grid-row: 2;
+    }
+
+    .row2 {
+        grid-column: 3/5;
+        grid-row: 2;
+    }
