@@ -288,7 +288,7 @@ header a {
       flex-direction: column;
       align-items: flex-start;
       padding-left: 30px;
-      background-color: #1c87c9;
+      background-color: #8ecae6;
       border-radius: 8px;
       font-family: 'Jost', sans-serif;
       font-size: 16px;    
@@ -327,7 +327,7 @@ header a {
     .citation_body {
       padding: 10px;
       color: black;
-      font-size: 16px;
+      font-size: 10px;
       font-weight: bold;
     }
       
@@ -355,7 +355,7 @@ header a {
     .espaces_disciplines_container{
       background-color: #023047;
       color: white;
-      height: 220px;
+      height: 190px;
       font-family: 'Jost', sans-serif; 
     }
   
@@ -378,6 +378,7 @@ header a {
       color: white;
       font-weight: bold;
       background: none;
+      font-size: 10px;
     }
   
     .detente {
@@ -387,13 +388,16 @@ header a {
   
     ul {
       list-style-type: none; 
+      font-size: 10px;
+      
     }
   
     li::before {
       content: "•"; color: #FB8500; size: 100px;
       display: inline-block; width: 1em;
-      margin-left: -1em;
+      margin-left: 3em;
       font-size: 16px;
+      
     }
   /* FIN CCS Espaces Disciplines */
   /* CSS de photo coach+citation*/
