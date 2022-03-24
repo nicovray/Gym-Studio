@@ -33,6 +33,7 @@ body {
     background-color: whitesmoke;
     margin: 10px;
 }
+/**Header NavBar**/
 
 header {
     /*empeche de cacher le texte en dessous contrairement à fixed */
@@ -45,9 +46,6 @@ header {
     transition: box-shadow 1s;
     z-index: 1;
     /*pour rester toujours en avant-plan*/
-}
-.logo {
-    display: inline-block;
 }
 
 .shadowHeader {
@@ -82,12 +80,10 @@ header a {
 }
 
 .logo {
-    height: 100%;
     display: flex;
     align-items: center;
     padding-left: 5px;
     /*taille du texte dynamique*/
-    font-size: clamp(1.5rem, 5vw, 2.2rem);
 }
 
 .logo a {
@@ -95,7 +91,7 @@ header a {
 }
 
 .logo a:hover {
-    color: var(--orange);
+    color: var(--yellow);
 }
 
 .nav-ul {
@@ -116,7 +112,7 @@ header a {
 }
 
 .nav-ul a:hover {
-    background-color: var(--orange);
+    background-color: var(--yellow);
     border-radius: 5px;
     animation: flou 0.5s;
 }
@@ -197,16 +193,22 @@ header a {
 
 .contact {
   text-align: center;
-  padding: 0px;
 }
 
 .form {
     height: 150px;
     text-align: center;
 }
+#lastname, #email {
+    width: 25%;
+    padding-left: auto;
+    padding-right: auto;
+}
 
 #message {
-    width: 100%;
+    width: 60%;
+    padding-left: auto;
+    padding-right: auto;
     height: 250px;
 }
 
@@ -299,11 +301,11 @@ footer {
 /* fin du footer*/
 
 @media only screen 
-and (min-width: 992px) {
+and (max-width: 992px) {
     .hamburger {
         display: flex;
     }
-    .nav-contact {
+    .nav-ul {
         position: fixed;
         top: 60px;
         left: -100%;
@@ -318,13 +320,13 @@ and (min-width: 992px) {
     .slide {
         transform: translate(100%);
     }
-    .nav-contact a {
+    .nav-ul a {
         justify-content: left;
         padding-left: 5px;
         width: 50%;
         border-bottom: 1px solid rgba(192, 127, 6, 0.2);
     }
-    .nav-contact a:hover {
+    .nav-ul a:hover {
         border-radius: 0;
         animation: none;
     }
@@ -332,7 +334,10 @@ and (min-width: 992px) {
     article p{
         font-size: 1rem;
     }
-    
+}
+
+    @media only screen 
+    and (min-width: 992px) {
     .infos {
         display: grid;
         grid-template-columns: 2, 1fr;
