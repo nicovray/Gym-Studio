@@ -35,8 +35,9 @@ h2 {
     margin-top: 15px;
 }
 
-h3 {
+.container-accordions button {
     color: var(--orange);
+    font-size: 20px;
 }
 
 p {
