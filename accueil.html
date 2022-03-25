@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Gym Studio</title>
+        <link rel="stylesheet" type="text/css" href="accueil.css">
+    </head>
+    <body>
+        <header id="header">
+            <div class="progressBar-container">
+                <div class="progressBar" id="progressBar"></div>
+            </div>
+            <nav class="navbar">
+                <div class="logo"><a>
+                  <img src="RESSOURCES/IMAGES/logo-horizontal-footer.png" alt="logo Gymstudio"/>
+                </a></div>
+        
+                <ul class="nav-ul" id="nav_ul">
+                    <li>
+                        <a href="accueil.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="prestations.html">Prestations</a>
+                    </li>
+                    <li>
+                        <a href="equipe.html">Equipe</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </nav>
+        </header> 
+        
+        <!-- diaporama -->
+        <div class="slider-container">
+            <div class="menu">
+              <label for="slide-d-dot-1"></label>
+              <label for="slide-d-dot-2"></label>
+              <label for="slide-d-dot-3"></label>
+            </div>
+            <div class="buttons">
+                <input id="slide-d-dot-1" type="radio" name="slides" checked />
+                <div class="slide-d slide-1"></div>
+                <input id="slide-d-dot-2" type="radio" name="slides" />
+                <div class="slide-d slide-2"></div>
+                <input id="slide-d-dot-3" type="radio" name="slides" />
+                <div class="slide-d slide-3"></div>
+            </div>
+    </div>
+        <!-- fin diaporama -->
+        <!-- citation -->
+        <div class="citation_container">
+            <div class="citation_author">
+                <span class="citation_avatar">            
+                    <img class="citation_picture" src ="RESSOURCES/IMAGES/emilie.jpg" width =30px>
+                </span>
+                <span class="citation_author_name"> Emilie </span>
+            </div>
+            <div class ="citation_body">
+                <p> Notre philosophie : </p>
+                <p> Satisfaire chaque adhérent, quel que soit son profil. Viens comme tu es, on s'occupe du reste ! Inclusion, respect et sueur à volonté !</p>
+            </div>
+        </div>
+        <!-- fin citation -->
+        <!-- disciplines -->
+        <div class="espaces_disciplines_container">
+            <div class="salle_seances">
+                <div class="salle">
+                    <input class="sallebtn"type="button"value="Salle accès libre">
+                    <ul>
+                        <li><a>Boxe</a></li>
+                        <li><a>Strech</a></li>
+                        <li><a>Pilate</a></li>
+                    </ul>
+                </div>     
+                <div class="seances">
+                    <input class="seancesbtn"type="button"value="Séances individuelles">
+                    <ul>
+                        <li><a>Fitness</a></li>
+                        <li><a>Body attack</a></li>
+                        <li><a>Body combat</a></li>
+                    </ul>
+                </div>    
+            </div>  
+            <div class="detente">
+                <input class="detentebtn"type="button"value="Espace détente">
+            </div>
+        </div>            
+        
+        <!-- photo coach+ citation-->
+        <p>  
+            <div class="flex-container-c">
+                <img id="img_coach" src="RESSOURCES/IMAGES/coach.jpg" alt="coach"/>
+                <div class="div_coach">
+                    <div>
+                        <img id="img_etoile" src="RESSOURCES/IMAGES/etoiles.png" alt="etoiles"/>
+                    </div>
+                    <span >
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                            </p>
+                    </span>  
+                </div>
+            </div>
+        </p>
+        <!-- fin photo client+ citation-->
+        <p>
+            <div class="flex-container-c">
+                <span class="client_text">
+                    <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    </p>
+                </span>
+                <div class="container_client">
+                    <img id="img_client" src="RESSOURCES/IMAGES/client.jpg" alt="client"/>
+                </div>
+            </div>
+        </p>
+    </body>
+    <footer>
+        <section class="footerGrid">   
+                    <div class="row1">
+                       <h3>ADRESSE</h3>
+                       <p>4 rue Baron</p>
+                       <p>44000 Nantes</p>
+                    </div>
+                    <div class="row1">
+                       <h3>CONTACT</h3>
+                       <p><a href="tel:(+33)0123456789"> 01 23 45 67 89 </a></p>
+                       <p><a href="mailto:contact@gymstudio.fr"> contact@gymstudio.fr </a></p>
+                    </div>
+                    <div class="row1">
+                       <h3>HORAIRES</h3>
+                       <p>Du lundi au dimanche</p>
+                       <p>de 7H00 à 23H00</p>
+                    </div>
+                    
+                    <div class="row2">
+                        <div>
+                        <a class="bouton" href="contact.html">LAISSEZ-NOUS UN MESSAGE</a>
+                        </div>
+                    </div><div class="row2" id="logoFooter">
+                       <img src="logoHorizontalFooter.png"/>
+                    </div>
+                    <div class="row2">
+                       <h3>SUIVEZ-NOUS SUR NOS RESEAUX</h3>
+                       <p><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-new.png" alt="Icone Facebook"/>
+                          <img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-circle.png" alt="Icone Instagram"/>
+                          <img src="https://img.icons8.com/ios-glyphs/30/000000/youtube-play.png" alt="Icone YouTube"/>
+                       </p>
+                    </div>
+        </section>        
+           <div class="copyright">
+           <p>Copyright : Gym Studio - 2022</p>
+           </div>
+    </footer>
+<script src="accueil.js"></script> 
+</html>
