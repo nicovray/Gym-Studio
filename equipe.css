@@ -19,7 +19,7 @@
 }
 
 p {
-    font-size: 20px;
+    font-size: 15px;
     line-height: 1.5;
 }
 
@@ -232,7 +232,17 @@ header a {
 
 /** version desktop **/
 
-.coach {
+.coach img {
+    width: 75%;
+    height: 75%;
+    border-radius: 50px;
+  }
+  .coach h2 {
+    margin-top: 10px;
+    padding-top: 3rem;
+  }
+  
+  .coach {
     position: relative;
     background-color: var(--white);
     display: grid;
@@ -241,42 +251,87 @@ header a {
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+  }
+  
+  .coach p {
+    margin: 1rem;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 1rem;
+  }
+  .bob {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .apple {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+  .dylan {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .ellie {
+    grid-area: 4 / 3 / 5 / 4;
+  }
+  .emy {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+  .kim {
+    grid-area: 6 / 3 / 7 / 4;
+  }
+  .pierre {
+    grid-area: 7 / 1 / 8 / 2;
+  }
+  .lucy {
+    grid-area: 8 / 3 / 9 / 4;
+  }
+  .esteban {
+    grid-area: 9 / 1 / 10 / 2;
+  }
+  
+  @media (max-width: 992px) {
+    .coach {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      gap: 10px;
     }
-
-
- .coach p {
-     margin: 3rem;
- }  
-    .bob { grid-area: 1 / 1 / 2 / 2; }
-    .apple { grid-area: 2 / 3 / 3 / 4; }
-    .dylan { grid-area: 3 / 1 / 4 / 2; }
-    .ellie { grid-area: 4 / 3 / 5 / 4; }
-    .emy { grid-area: 5 / 1 / 6 / 2; }
-    .kim { grid-area: 6 / 3 / 7 / 4; }
-    .pierre { grid-area: 7 / 1 / 8 / 2; }
-    .lucy { grid-area: 8 / 3 / 9 / 4; }
-    .esteban { grid-area: 9 / 1 / 10 / 2; }
-
-
-    @media (max-width: 992px) {
-        .coach {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        }
-                
-        .bob { grid-area: 1 / 1 / 2 / 2; }
-        .apple { grid-area: 2 / 2 / 3 / 3; }
-        .dylan { grid-area: 3 / 1 / 4 / 2; }
-        .ellie { grid-area: 4 / 2 / 5 / 3; }
-        .emy { grid-area: 5 / 1 / 6 / 2; }
-        .kim { grid-area: 6 / 2 / 7 / 3; }
-        .pierre { grid-area: 7 / 1 / 8 / 2; }
-        .lucy { grid-area: 8 / 2 / 9 / 3; }
-        .esteban { grid-area: 9 / 1 / 10 / 2; }
+  
+    .coach img {
+      width: 50%;
+      height: 50%;
     }
+  
+    .bob {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .apple {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+    .dylan {
+      grid-area: 3 / 1 / 4 / 2;
+    }
+    .ellie {
+      grid-area: 4 / 2 / 5 / 3;
+    }
+    .emy {
+      grid-area: 5 / 1 / 6 / 2;
+    }
+    .kim {
+      grid-area: 6 / 2 / 7 / 3;
+    }
+    .pierre {
+      grid-area: 7 / 1 / 8 / 2;
+    }
+    .lucy {
+      grid-area: 8 / 2 / 9 / 3;
+    }
+    .esteban {
+      grid-area: 9 / 1 / 10 / 2;
+    }
+  }
   
 
     /* FOOTER */
